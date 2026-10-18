@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{379BED53-67A1-4A20-BC48-68B6F791F4B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>URWPGSim2D.Strategy</RootNamespace>
+    <AssemblyName>GrabBall Dilemma</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FrameworkPathOverride Condition="'$(TargetFrameworkVersion)' == 'v3.5' And !Exists('$(FrameworkPathOverride)')">$(USERPROFILE)\.nuget\packages\microsoft.netframework.referenceassemblies.net35\1.0.3\build\.NETFramework\v3.5</FrameworkPathOverride>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Ccr.Core">
+      <HintPath>..\..\..\..\..\..\URWPGSim2D\bin\Microsoft.Ccr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Base">
+      <HintPath>..\..\..\..\..\..\URWPGSim2D\bin\Microsoft.Dss.Base.dll</HintPath>
+    </Reference>
+<Reference Include="Microsoft.Xna.Framework">
+      <HintPath>..\..\..\..\..\..\URWPGSim2D\bin\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="FrameDiagnostics.Legacy35">
+      <HintPath>..\..\..\..\..\..\..\..\..\URWPGSim2D\bin\FD\Legacy35\FrameDiagnostics.Legacy35.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="URWPGSim2D.Common">
+      <HintPath>..\..\..\..\..\..\URWPGSim2D\bin\URWPGSim2D.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="URWPGSim2D.StrategyLoader">
+      <HintPath>..\..\..\..\..\..\URWPGSim2D\bin\URWPGSim2D.StrategyLoader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAction.cs" />
+    <Compile Include="Compute.cs" />
+    <Compile Include="DebugRecord.cs" />
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="MyFishRobot.cs" />
+    <Compile Include="Point2D.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

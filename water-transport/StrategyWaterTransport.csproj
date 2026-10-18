@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C9BEB6E-4EAA-41B3-8687-F2F419D513A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>URWPGSim2D.Strategy</RootNamespace>
+    <AssemblyName>StrategyWaterTransport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FrameworkPathOverride Condition="'$(TargetFrameworkVersion)' == 'v3.5' And !Exists('$(FrameworkPathOverride)')">$(USERPROFILE)\.nuget\packages\microsoft.netframework.referenceassemblies.net35\1.0.3\build\.NETFramework\v3.5</FrameworkPathOverride>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="URWPGSim2D.Core">
+      <HintPath>..\..\..\URWPGSim2D\bin\URWPGSim2D.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework">
+      <HintPath>..\..\..\URWPGSim2D\bin\Microsoft.Xna.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Base">
+      <HintPath>..\..\..\URWPGSim2D\bin\Microsoft.Dss.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="URWPGSim2D.Common">
+      <HintPath>..\..\Common\obj\Release\URWPGSim2D.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="URWPGSim2D.StrategyLoader">
+      <HintPath>..\..\StrategyLoader\obj\Release\URWPGSim2D.StrategyLoader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FrameDiagnostics.Legacy35">
+      <HintPath>..\..\..\URWPGSim2D\bin\FD\Legacy35\FrameDiagnostics.Legacy35.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Strategy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

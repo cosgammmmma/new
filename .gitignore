@@ -1,0 +1,8 @@
+.codegraph/
+.omo/
+.vs/
+.vscode/
+obj/
+*.user
+*.suo
+Tests/out/
